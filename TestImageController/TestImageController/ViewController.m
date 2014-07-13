@@ -27,25 +27,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-//    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"10.png"]]]];
-//    [self.view setBackgroundColor:[UIColor orangeColor]];
-//    UIImage *originalImage = [UIImage imageWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"10.png"]];
-//    UIImage *newImage = [self thumbnailWithImageWithoutScale:originalImage size:CGSizeMake(60, 80)];
-//    UIImageView *imageView = [[UIImageView alloc] initWithImage:newImage];
-//    imageView.center = self.view.center;
-//    [self.view addSubview:imageView];
-    
     self.img = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 93, 93)];
     UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithTitle:@"picture" style:UIBarButtonItemStyleBordered target:self action:@selector(takePictureClick:)];
     self.navigationItem.rightBarButtonItem = left;
-//    NSURL *url = [NSURL URLWithString:@"http://www.weather.com/travel/travel-pro/50-stunning-aerials-will-make-you-see-world-new-ways-photos-20140516"];
-//    self.img.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
     [self.view addSubview:self.img];
-    
-    
-//    NSFileManager *fileManager = [NSFileManager defaultManager];
-//    NSError *error;
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -60,18 +45,6 @@
 //从相册获取图片
 -(void)takePictureClick:(UIButton *)sender
 {
-//    /*注：使用，需要实现以下协议：UIImagePickerControllerDelegate,
-//     UINavigationControllerDelegate
-//     */
-//    UIImagePickerController *picker = [[UIImagePickerController alloc]init];
-//    //设置图片源(相簿)
-//    picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-//    //设置代理
-//    picker.delegate = self;
-//    //设置可以编辑
-//    picker.allowsEditing = YES;
-//    //打开拾取器界面
-//    [self presentViewController:picker animated:YES completion:nil];
     UIActionSheet* actionSheet = [[UIActionSheet alloc]
                                   initWithTitle:@"请选择文件来源"
                                   delegate:self
@@ -85,7 +58,6 @@
 #pragma UIActionSheet Delegate
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    NSLog(@"buttonIndex = [%d]",buttonIndex);
     switch (buttonIndex) {
         case 0://照相机
         {
@@ -93,7 +65,6 @@
             imagePicker.delegate = self;
             imagePicker.allowsEditing = YES;
             imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-//            [self presentModalViewController:imagePicker animated:YES];
             [self presentViewController:imagePicker animated:YES completion:nil];
         }
             break;
@@ -104,7 +75,6 @@
             imagePicker.allowsEditing = YES;
             imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
             imagePicker.videoQuality = UIImagePickerControllerQualityTypeLow;
-//            [self presentModalViewController:imagePicker animated:YES];
             [self presentViewController:imagePicker animated:YES completion:nil];
         }
             break;
@@ -114,7 +84,6 @@
             imagePicker.delegate = self;
             imagePicker.allowsEditing = YES;
             imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-//            [self presentModalViewController:imagePicker animated:YES];
             [self presentViewController:imagePicker animated:YES completion:nil];
         }
             break;
@@ -124,7 +93,6 @@
             imagePicker.delegate = self;
             imagePicker.allowsEditing = YES;
             imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-//            [self presentModalViewController:imagePicker animated:YES];
             [self presentViewController:imagePicker animated:YES completion:nil];
         }
             break;
@@ -145,13 +113,11 @@
         NSString *videoPath = [[info objectForKey:UIImagePickerControllerMediaURL] path];
         self.fileData = [NSData dataWithContentsOfFile:videoPath];
     }
-//    [picker dismissModalViewControllerAnimated:YES];
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-//    [picker dismissModalViewControllerAnimated:YES];
         [picker dismissViewControllerAnimated:YES completion:nil];
 }
 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1B2FA79F-FAAF-4887-8464-96FBA01A4227</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TestImageController</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E4248D1F-3FD5-4A1B-A7D6-44B7302A566D</key>
+		<string>ssh://github.com/wangtao169447/TakeAvatarPhoto.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TestImageController/TestImageController.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E4248D1F-3FD5-4A1B-A7D6-44B7302A566D</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/wangtao169447/TakeAvatarPhoto.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E4248D1F-3FD5-4A1B-A7D6-44B7302A566D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E4248D1F-3FD5-4A1B-A7D6-44B7302A566D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>myrepos</string>
+		</dict>
+	</array>
+</dict>
+</plist>
